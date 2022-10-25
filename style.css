@@ -1,0 +1,59 @@
+*{
+margin :0;
+padding : 0;
+box-sizing : boder-box;
+background-color: rgb(24, 103, 106);
+}
+.head{
+    font-family: "Sofia", sans-serif;
+    text-shadow: 3px 3px 3px #ababab;
+    text-align: center;
+    font-size: 5vw;
+    color: white;
+    margin: 50px 0;
+}
+
+.heart{
+    margin: auto;
+    text-align: center;
+    position: relative;
+    height: 160px;
+    width: 100px;
+    background-color: red;
+    box-shadow: 0 0 20px red;
+    border-radius: 200px 200px 30px 0 ;
+    transform: rotate(45deg);
+    animation: hbeat 1s linear infinite;
+}
+.heart::before{
+    content: "";
+    position: absolute;
+    background-color: red;
+    box-shadow: 0 0 20px red;
+    height: 160px;
+    width: 100px;
+    transform: rotate(-90deg);
+    border-radius: 200px 200px 0px 30px;
+    left: -30px;
+    top: 30px;
+}
+@keyframes hbeat {
+    0%{
+        transform: rotate(45deg) scale(1);
+    }
+    20%{
+        transform: rotate(45deg) scale(1);
+    }
+    40%{
+        transform: rotate(45deg) scale(1.4);
+    }
+    60%{
+        transform: rotate(45deg) scale(1.2);
+    }
+    80%{
+        transform: rotate(45deg) scale(1);
+    }
+    100%{
+        transform:rotate(45deg)  scale(1);
+    }
+}
